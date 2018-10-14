@@ -1,3 +1,32 @@
 page-home {
+    background-color: white;
+    color: black;
+}
 
+input {
+    border-radius: 5px;
+    border: 1px solid grey;
+    width: 90%;
+    height: 5%;
+    background-color: whitesmoke
+}
+
+h2::after {
+    content: "";
+    top: 78px;
+    left: 16px;
+    height: 3px;
+    width: 85px;
+    background-color:#0984e3;
+    position: absolute;
+    border-radius: 5px;
+}
+
+ion-card-header {
+    max-height: 5vh;
+}
+
+ion-list {
+    display: flex;
+    align-items: flex-end;
 }

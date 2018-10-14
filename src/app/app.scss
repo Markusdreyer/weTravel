@@ -14,3 +14,19 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+h1 {
+    font-size: 22px;
+    color: black;
+    margin: 40px 40px 0 $margin;
+    text-align: left;
+}
+
+h2 {
+    font-size: 15px;
+    color: black;
+    text-align: left;
+}
+
+
+
