@@ -1,26 +1,34 @@
 <ion-header>
   <h1 page-title>What would you like to do?</h1>
 </ion-header>
-<ion-content padding>
 
+<ion-content padding>
   <input placeholder="Search">
+
   <h2>Restaurants</h2>
+  <hr>
   <ion-list>
-    <ion-card>
+    <ion-card *ngFor="let restaurant of restaurants">
       <ion-card-header>
-        Burger
+        <img src={{restaurant.image}}>
       </ion-card-header>
       <ion-card-content>
-
+        <div>$$$</div>
+        <div>{{restaurant.name}}</div>
       </ion-card-content>
     </ion-card>
-    <ion-card>
+  </ion-list>
+
+  <h2>Shopping</h2>
+  <hr>
+  <ion-list>
+    <ion-card *ngFor="let shop of restaurants">
       <ion-card-header>
-        Pasta
+        <img src={{shop.image}}>
       </ion-card-header>
-
       <ion-card-content>
-
+        <div>$$$</div>
+        <div>{{shop.name}}</div>
       </ion-card-content>
     </ion-card>
   </ion-list>
