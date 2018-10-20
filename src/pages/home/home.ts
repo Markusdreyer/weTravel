@@ -1,14 +1,23 @@
-import { Component } from '@angular/core';
-import { NavController, ToastController, ModalController } from 'ionic-angular';
+import { Component } from "@angular/core";
+import { NavController } from "ionic-angular";
+import { RestaurantsPage } from "../restaurants/restaurants";
+import { ActivitiesPage } from "../activities/activities";
+import { ShopsPage } from "../shops/shops";
 
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+  selector: "page-home",
+  templateUrl: "home.html"
 })
 export class HomePage {
-
+  //Lists of attractions
   restaurants: any[];
   shops: any[];
+  activities: any[];
+
+  //Attraction pages
+  restaurantsPage: RestaurantsPage;
+  shopsPage: ShopsPage;
+  activitiesPage: ActivitiesPage;
 
   constructor(public navCtrl: NavController) {
     this.restaurants = [
@@ -19,11 +28,23 @@ export class HomePage {
     ];
 
     this.shops = [
-      new Shop("Gucci", "../../assets/imgs/ceviche_0.jpg"),
-      new Shop("Louis Vuitton", "../../assets/imgs/buzara.jpg"),
-      new Shop("Sara", "../../assets/imgs/lomo.jpg"),
-      new Shop("Follestad", "../../assets/imgs/thumb_beef_hearts.jpg")
+      new Shop("Antiques", "../../assets/imgs/antiques.jpg"),
+      new Shop("Books", "../../assets/imgs/books.jpg"),
+      new Shop("Music", "../../assets/imgs/music.jpeg"),
+      new Shop("Luxury", "../../assets/imgs/luxury.jpeg")
     ];
+
+    this.activities = [
+      new Activity("Driving", "../../assets/imgs/drive.jpeg"),
+      new Activity("Biking", "../../assets/imgs/bike.jpeg"),
+      new Activity("Football", "../../assets/imgs/football.jpeg"),
+      new Activity("Golfing", "../../assets/imgs/golf.jpg")
+    ];
+  }
+
+  navigateToPage(pageName) {
+    this.navCtrl.push(pageName);
+    console.log(pageName);
   }
 }
 
@@ -33,6 +54,11 @@ function Restaurant(name: string, image: string) {
 }
 
 function Shop(name: string, image: string) {
+  this.name = name;
+  this.image = image;
+}
+
+function Activity(name: string, image: string) {
   this.name = name;
   this.image = image;
 }

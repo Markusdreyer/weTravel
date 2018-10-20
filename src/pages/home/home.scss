@@ -1,29 +1,31 @@
 page-home {
-    background-color: white;
-    color: black;
+  background-color: white;
+  color: black;
 }
 
 input {
-    border-radius: 5px;
-    border: 1px solid grey;
-    width: 90%;
-    height: 5%;
-    background-color: whitesmoke
+  text-align: center;
+  margin: 15px $margin;
+  border-radius: 5px;
+  border: 1px solid grey;
+  width: 90%;
+  height: 5%;
+  background-color: whitesmoke;
 }
 
 ion-card {
-    min-width: 180px;
-    min-height: 120px; 
-}   
+  min-width: 180px;
+  min-height: 120px;
+}
 
 ion-card-content {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 ion-list {
-    flex: 1;
-    overflow: scroll;
-    display: flex;
-    align-items: flex-end;
+  flex: 1;
+  overflow: scroll;
+  display: flex;
+  align-items: flex-end;
 }

@@ -1,6 +1,5 @@
 // http://ionicframework.com/docs/theming/
 
-
 // App Global Sass
 // --------------------------------------------------
 // Put style rules here that you want to apply globally. These
@@ -16,21 +15,14 @@
 // automatically applied to the <body> element in the app.
 
 h1 {
-    font-size: 22px;
-    color: black;
-    margin: 40px 40px 0 $margin;
-    text-align: left;
+  font-size: 22px;
+  margin: 15px 15px 15px 15px !important;
+  color: black;
+  text-align: center;
 }
 
 h2 {
-    font-size: 15px;
-    color: black;
-    text-align: left;
+  font-size: 15px;
+  color: black;
+  text-align: left;
 }
-
-ion-header {
-
-}
-
-
-
