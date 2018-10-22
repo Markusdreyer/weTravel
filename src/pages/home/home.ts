@@ -6,7 +6,6 @@ import { NavController } from "ionic-angular";
   templateUrl: "home.html"
 })
 export class HomePage {
-
   //Lists of attractions
   restaurants: any[];
   shops: any[];
@@ -33,12 +32,27 @@ export class HomePage {
       new Activity("Football", "../../assets/imgs/football.jpeg"),
       new Activity("Golfing", "../../assets/imgs/golf.jpg")
     ];
-
   }
 
   navigateToPage(pageName) {
     this.navCtrl.push(pageName);
     console.log(pageName);
+  }
+
+  //Enables back swipe navigation when leaving HomePage
+  public ionViewDidLeave(): void {
+    this.navCtrl.swipeBackEnabled = true;
+    console.log(
+      "IonViewDidLeave\n" + "swipeBackEnabled:" + this.navCtrl.swipeBackEnabled
+    );
+  }
+
+  //Disables back swipe navigation while on HomePage to not be able to swipe back to login screen
+  public ionViewDidEnter(): void {
+    this.navCtrl.swipeBackEnabled = false;
+    console.log(
+      "IonViewDidEnter\n" + "swipeBackEnabled:" + this.navCtrl.swipeBackEnabled
+    );
   }
 }
 

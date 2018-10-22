@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { HomePage } from '../home/home';
+import { Component } from "@angular/core";
+import { IonicPage, NavController, NavParams } from "ionic-angular";
+import { HomePage } from "../home/home";
 
 /**
  * Generated class for the LoginPage page.
@@ -11,31 +11,15 @@ import { HomePage } from '../home/home';
 
 @IonicPage()
 @Component({
-  selector: 'page-login',
-  templateUrl: 'login.html',
+  selector: "page-login",
+  templateUrl: "login.html"
 })
 export class LoginPage {
-
   HomePage: HomePage;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
   navigateToPage() {
     this.navCtrl.push(HomePage);
   }
-
-
-  //Disables swiping back to the Login page from HomePage
-  public ionViewWillEnter(): void {
-    this.navCtrl.swipeBackEnabled = true;
-  }
-
-  //Disables swiping back to the Login page from HomePage
-  public ionViewDidLeave(): void {
-    this.navCtrl.swipeBackEnabled = false;
-  }
-
 }
-
-

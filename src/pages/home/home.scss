@@ -8,17 +8,17 @@ page-home {
     height: 5%;
     background-color: whitesmoke;
   }
-  
+
   ion-card {
     min-width: 180px;
     min-height: 120px;
   }
-  
+
   ion-card-content {
     display: flex;
     justify-content: space-between;
   }
-  
+
   ion-list {
     flex: 1;
     overflow: scroll;

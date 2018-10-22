@@ -1,4 +1,9 @@
 <ion-content padding>
+  <h1>Restaurants</h1>
+  <h2>Distance</h2>
+  <ion-item>
+    <ion-range min="100" max="200" step="25" snaps="true" color="secondary" [(ngModel)]="singleValue4"></ion-range>
+  </ion-item>
   <ion-list>
     <ion-grid>
       <ion-row>
@@ -16,5 +21,4 @@
       </ion-row>
     </ion-grid>
   </ion-list>
-
 </ion-content>
