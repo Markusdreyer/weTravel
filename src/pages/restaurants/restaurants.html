@@ -1,18 +1,20 @@
-<!--
-  Generated template for the RestaurantsPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>restaurants</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
-
 <ion-content padding>
+  <ion-list>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-6 *ngFor="let restaurant of restaurants">
+          <ion-card>
+            <ion-card-header>
+              <img src={{restaurant.image}}>
+            </ion-card-header>
+            <ion-card-content>
+              <div>$$$</div>
+              <div>{{restaurant.name}}</div>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-list>
 
 </ion-content>

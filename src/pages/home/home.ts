@@ -1,23 +1,16 @@
 import { Component } from "@angular/core";
 import { NavController } from "ionic-angular";
-import { RestaurantsPage } from "../restaurants/restaurants";
-import { ActivitiesPage } from "../activities/activities";
-import { ShopsPage } from "../shops/shops";
 
 @Component({
   selector: "page-home",
   templateUrl: "home.html"
 })
 export class HomePage {
+
   //Lists of attractions
   restaurants: any[];
   shops: any[];
   activities: any[];
-
-  //Attraction pages
-  restaurantsPage: RestaurantsPage;
-  shopsPage: ShopsPage;
-  activitiesPage: ActivitiesPage;
 
   constructor(public navCtrl: NavController) {
     this.restaurants = [
@@ -40,6 +33,7 @@ export class HomePage {
       new Activity("Football", "../../assets/imgs/football.jpeg"),
       new Activity("Golfing", "../../assets/imgs/golf.jpg")
     ];
+
   }
 
   navigateToPage(pageName) {

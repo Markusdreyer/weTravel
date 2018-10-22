@@ -15,11 +15,19 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class RestaurantsPage {
 
+  restaurants: any[];
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.restaurants = [
+      new Restaurant("WonderBurger", "../../assets/imgs/ceviche_0.jpg"),
+      new Restaurant("PeacePasta", "../../assets/imgs/buzara.jpg"),
+      new Restaurant("CheapChilli", "../../assets/imgs/lomo.jpg"),
+      new Restaurant("CheapChilli", "../../assets/imgs/thumb_beef_hearts.jpg")
+    ];
   }
+}
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad RestaurantsPage');
-  }
-
+function Restaurant(name: string, image: string) {
+  this.name = name;
+  this.image = image;
 }

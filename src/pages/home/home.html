@@ -1,55 +1,55 @@
 <ion-content padding>
-    <h1 page-title>What would you like to do?</h1>
-    <div>
-        <input placeholder="Search">
-    </div>
+  <h1 page-title>What would you like to do?</h1>
+  <div>
+    <input placeholder="Search">
+  </div>
 
-    <button (click)="navigateToPage('RestaurantsPage')">
-        <h2>Restaurants</h2>
-    </button>
-    <hr>
-    <ion-list>
-        <ion-card *ngFor="let restaurant of restaurants">
-            <ion-card-header>
-                <img src={{restaurant.image}}>
-            </ion-card-header>
-            <ion-card-content>
-                <div>$$$</div>
-                <div>{{restaurant.name}}</div>
-            </ion-card-content>
-        </ion-card>
-    </ion-list>
+  <button (click)="navigateToPage('RestaurantsPage')">
+    <h2>Restaurants</h2>
+  </button>
+  <hr>
+  <ion-list>
+    <ion-card *ngFor="let restaurant of restaurants">
+      <ion-card-header>
+        <img src={{restaurant.image}}>
+      </ion-card-header>
+      <ion-card-content>
+        <div>$$$</div>
+        <div>{{restaurant.name}}</div>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
 
-    <button (click)="navigateToPage('ShopsPage')">
-        <h2>Shops</h2>
-    </button>
-    <hr>
-    <ion-list>
-        <ion-card *ngFor="let shop of shops">
-            <ion-card-header>
-                <img src={{shop.image}}>
-            </ion-card-header>
-            <ion-card-content>
-                <div>$$$</div>
-                <div>{{shop.name}}</div>
-            </ion-card-content>
-        </ion-card>
-    </ion-list>
+  <button (click)="navigateToPage('ShopsPage')">
+    <h2>Shops</h2>
+  </button>
+  <hr>
+  <ion-list>
+    <ion-card *ngFor="let shop of shops">
+      <ion-card-header>
+        <img src={{shop.image}}>
+      </ion-card-header>
+      <ion-card-content>
+        <div>$$$</div>
+        <div>{{shop.name}}</div>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
 
-    <button (click)="navigateToPage('ActivitiesPage')">
-        <h2>Activities</h2>
-    </button>
-    <hr>
-    <ion-list>
-        <ion-card *ngFor="let activity of activities">
-            <ion-card-header>
-                <img src={{activity.image}}>
-            </ion-card-header>
-            <ion-card-content>
-                <div>$$$</div>
-                <div>{{activity.name}}</div>
-            </ion-card-content>
-        </ion-card>
-    </ion-list>
+  <button (click)="navigateToPage('ActivitiesPage')">
+    <h2>Activities</h2>
+  </button>
+  <hr>
+  <ion-list>
+    <ion-card *ngFor="let activity of activities">
+      <ion-card-header>
+        <img src={{activity.image}}>
+      </ion-card-header>
+      <ion-card-content>
+        <div>$$$</div>
+        <div>{{activity.name}}</div>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
 
 </ion-content>
