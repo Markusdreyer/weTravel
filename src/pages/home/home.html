@@ -4,6 +4,27 @@
     <input placeholder="Search">
   </div>
 
+  <div>
+    <h2>Featured</h2>
+    <ion-list>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6 *ngFor="let feature of featured">
+            <ion-card>
+              <ion-card-header>
+                <img src={{feature.image}}>
+              </ion-card-header>
+              <ion-card-content>
+                <div>$</div>
+                <div>{{feature.name}}</div>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-list>
+  </div>
+
   <button (click)="navigateToPage('RestaurantsPage')">
     <h2>Restaurants</h2>
   </button>

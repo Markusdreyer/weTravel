@@ -15,11 +15,21 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ShopsPage {
 
+  shops: any[];
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.shops = [
+      new Shop("Antiques", "../../assets/imgs/antiques.jpg"),
+      new Shop("Books", "../../assets/imgs/books.jpg"),
+      new Shop("Music", "../../assets/imgs/music.jpeg"),
+      new Shop("Luxury", "../../assets/imgs/luxury.jpeg")
+    ];
+
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ShopsPage');
-  }
+}
 
+function Shop(name: string, image: string) {
+  this.name = name;
+  this.image = image;
 }

@@ -1,5 +1,10 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Restaurants</ion-title>
+  </ion-navbar>
+</ion-header>
+
 <ion-content padding>
-  <h1>Restaurants</h1>
   <h2>Distance</h2>
   <ion-item>
     <ion-range min="100" max="200" step="25" snaps="true" color="secondary" [(ngModel)]="singleValue4"></ion-range>
@@ -13,7 +18,7 @@
               <img src={{restaurant.image}}>
             </ion-card-header>
             <ion-card-content>
-              <div>$$$</div>
+              <div>$</div>
               <div>{{restaurant.name}}</div>
             </ion-card-content>
           </ion-card>

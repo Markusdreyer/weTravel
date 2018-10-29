@@ -10,6 +10,7 @@ export class HomePage {
   restaurants: any[];
   shops: any[];
   activities: any[];
+  featured: any[];
 
   constructor(public navCtrl: NavController) {
     this.restaurants = [
@@ -32,27 +33,29 @@ export class HomePage {
       new Activity("Football", "../../assets/imgs/football.jpeg"),
       new Activity("Golfing", "../../assets/imgs/golf.jpg")
     ];
+
+    this.featured = [
+      this.restaurants[pickRandomActivity()],
+      this.shops[pickRandomActivity()],
+      this.activities[pickRandomActivity()],
+      this.activities[pickRandomActivity()]
+    ];
   }
+
+
 
   navigateToPage(pageName) {
     this.navCtrl.push(pageName);
-    console.log(pageName);
   }
 
   //Enables back swipe navigation when leaving HomePage
   public ionViewDidLeave(): void {
     this.navCtrl.swipeBackEnabled = true;
-    console.log(
-      "IonViewDidLeave\n" + "swipeBackEnabled:" + this.navCtrl.swipeBackEnabled
-    );
   }
 
   //Disables back swipe navigation while on HomePage to not be able to swipe back to login screen
   public ionViewDidEnter(): void {
     this.navCtrl.swipeBackEnabled = false;
-    console.log(
-      "IonViewDidEnter\n" + "swipeBackEnabled:" + this.navCtrl.swipeBackEnabled
-    );
   }
 }
 
@@ -69,4 +72,8 @@ function Shop(name: string, image: string) {
 function Activity(name: string, image: string) {
   this.name = name;
   this.image = image;
+}
+
+function pickRandomActivity() {
+  return Math.floor(Math.random() * 5);
 }

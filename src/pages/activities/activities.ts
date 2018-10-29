@@ -15,11 +15,22 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ActivitiesPage {
 
+  activities: any[];
+
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.activities = [
+      new Activity("Driving", "../../assets/imgs/drive.jpeg"),
+      new Activity("Biking", "../../assets/imgs/bike.jpeg"),
+      new Activity("Football", "../../assets/imgs/football.jpeg"),
+      new Activity("Golfing", "../../assets/imgs/golf.jpg")
+    ];
+
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ActivitiesPage');
-  }
+}
 
+function Activity(name: string, image: string) {
+  this.name = name;
+  this.image = image;
 }
