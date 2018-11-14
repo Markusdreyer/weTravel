@@ -75,5 +75,6 @@ function Activity(name: string, image: string) {
 }
 
 function pickRandomActivity() {
-  return Math.floor(Math.random() * 5);
+  const randomNumber = Math.floor(Math.random() * 4)
+  return randomNumber;
 }
