@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { NavController } from "ionic-angular";
+import { Dto } from "./Dto";
 
 @Component({
   selector: "page-home",
@@ -11,13 +12,15 @@ export class HomePage {
   shops: any[];
   activities: any[];
   featured: any[];
+  randomNumbers = generateRandom();
 
   constructor(public navCtrl: NavController) {
+    generateRandom();
     this.restaurants = [
-      new Restaurant("WonderBurger", "../../assets/imgs/ceviche_0.jpg"),
-      new Restaurant("PeacePasta", "../../assets/imgs/buzara.jpg"),
-      new Restaurant("CheapChilli", "../../assets/imgs/lomo.jpg"),
-      new Restaurant("CheapChilli", "../../assets/imgs/thumb_beef_hearts.jpg")
+      new Restaurant("WonderBurger", "../../assets/imgs/restaurants/restaurant2.jpg"),
+      new Restaurant("PeacePasta", "../../assets/imgs/restaurants/restaurant1.jpg"),
+      new Restaurant("CheapChilli", "../../assets/imgs/restaurants/restaurant3.jpg"),
+      new Restaurant("CheapChilli", "../../assets/imgs/restaurants/restaurant4.jpg")
     ];
 
     this.shops = [
@@ -35,17 +38,20 @@ export class HomePage {
     ];
 
     this.featured = [
-      this.restaurants[pickRandomActivity()],
-      this.shops[pickRandomActivity()],
-      this.activities[pickRandomActivity()],
-      this.activities[pickRandomActivity()]
+      this.restaurants[this.randomNumbers[0]],
+      this.shops[this.randomNumbers[1]],
+      this.activities[this.randomNumbers[2]],
+      this.activities[this.randomNumbers[3]]
     ];
   }
 
 
 
-  navigateToPage(pageName) {
-    this.navCtrl.push(pageName);
+  navigateToPage(pageName, product) {
+    let dto = new Dto(product.name, product.image);
+    this.navCtrl.push(pageName, {
+      data: dto
+    });
   }
 
   //Enables back swipe navigation when leaving HomePage
@@ -74,7 +80,24 @@ function Activity(name: string, image: string) {
   this.image = image;
 }
 
-function pickRandomActivity() {
-  const randomNumber = Math.floor(Math.random() * 4)
-  return randomNumber;
+function generateRandom() {
+  var max = 4;
+  const random = [];
+  for (var i = 0; i < max; i++) {
+    var temp = Math.floor(Math.random() * max);
+    if (random.indexOf(temp) == -1) {
+      random.push(temp);
+    }
+    else
+      i--;
+  }
+  return random;
 }
+
+
+
+
+
+
+
+

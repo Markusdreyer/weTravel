@@ -10,8 +10,8 @@ page-home {
   }
 
   ion-card {
-    min-width: 180px;
-    min-height: 120px;
+    min-width: 150px;
+    min-height: 100px;
     border-radius: 5px !important;
   }
 
@@ -25,6 +25,7 @@ page-home {
     overflow: scroll;
     display: flex;
     align-items: flex-end;
+    justify-content: space-between;
   }
 
   ion-button {
