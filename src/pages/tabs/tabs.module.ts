@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 
+
 import { TabsPage } from './tabs';
 
 @NgModule({
@@ -14,4 +15,4 @@ import { TabsPage } from './tabs';
     TabsPage
   ]
 })
-export class TabsPageModule {}
+export class TabsPageModule { }

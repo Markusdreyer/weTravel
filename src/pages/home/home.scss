@@ -1,4 +1,6 @@
 page-home {  
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  
   input {
     text-align: center;
     margin: 15px $margin;
@@ -28,12 +30,16 @@ page-home {
       justify-content: space-between;
     }
 
+    img {
+      transform: scale(1.5);
+    }
+
     ion-slide {
       height: 100%;
 
       ion-card {
         width: 70vw !important;
-        height: 60%;
+        height: 69%;
         filter: blur(1px);
       }
     }

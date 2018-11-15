@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { SplashPage } from './splash';
 
+
+
 @NgModule({
   declarations: [
     SplashPage,
@@ -13,4 +15,4 @@ import { SplashPage } from './splash';
     SplashPage
   ]
 })
-export class SplashPageModule {}
+export class SplashPageModule { }

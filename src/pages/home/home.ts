@@ -19,24 +19,24 @@ export class HomePage {
   constructor(public navCtrl: NavController) {
     generateRandom();
     this.restaurants = [
-      new Restaurant("WonderBurger", "../../assets/imgs/restaurants/restaurant2.jpg", "$$$$", "Fossveien 7, 0551 Oslo", 3),
-      new Restaurant("PeacePasta", "../../assets/imgs/restaurants/restaurant1.jpg", "$$$", "Carld Berner 12, 3121 Oslo", 2),
+      new Restaurant("Den glade gris", "../../assets/imgs/thumbnail/denGladeGrisPlaceholder.jpeg", "$$$$", "Fossveien 7, 0551 Oslo", 3),
+      new Restaurant("Edda", "../../assets/imgs/thumbnail/restaurantEddaPlaceholder.jpeg", "$$$", "Carld Berner 12, 3121 Oslo", 2),
       new Restaurant("CheapChilli", "../../assets/imgs/restaurants/restaurant3.jpg", "$", "Konvallveien 23, 1921 Oslo", 4),
       new Restaurant("BoulderBass", "../../assets/imgs/restaurants/restaurant4.jpg", "$$", "Platsen 31, 0541 Oslo", 1)
     ];
 
     this.shops = [
-      new Shop("Antiques", "../../assets/imgs/antiques.jpg"),
-      new Shop("Books", "../../assets/imgs/books.jpg"),
-      new Shop("Music", "../../assets/imgs/music.jpeg"),
-      new Shop("Luxury", "../../assets/imgs/luxury.jpeg")
+      new Shop("Antiques", "../../assets/imgs/antiques.jpg", "$$", "Platsen 31, 0541 Oslo", 1),
+      new Shop("Books", "../../assets/imgs/books.jpg", "$$", "Platsen 31, 0541 Oslo", 1),
+      new Shop("Music", "../../assets/imgs/music.jpeg", "$$", "Platsen 31, 0541 Oslo", 1),
+      new Shop("Luxury", "../../assets/imgs/luxury.jpeg", "$$", "Platsen 31, 0541 Oslo", 1)
     ];
 
     this.activities = [
-      new Activity("Driving", "../../assets/imgs/drive.jpeg"),
-      new Activity("Biking", "../../assets/imgs/bike.jpeg"),
-      new Activity("Football", "../../assets/imgs/football.jpeg"),
-      new Activity("Golfing", "../../assets/imgs/golf.jpg")
+      new Activity("Driving", "../../assets/imgs/drive.jpeg", "$$", "Platsen 31, 0541 Oslo", 1),
+      new Activity("Biking", "../../assets/imgs/bike.jpeg", "$$", "Platsen 31, 0541 Oslo", 1),
+      new Activity("Football", "../../assets/imgs/football.jpeg", "$$", "Platsen 31, 0541 Oslo", 1),
+      new Activity("Golfing", "../../assets/imgs/golf.jpg", "$$", "Platsen 31, 0541 Oslo", 1)
     ];
 
     this.featured = [
@@ -64,7 +64,7 @@ export class HomePage {
     this.navCtrl.swipeBackEnabled = false;
   }
 
- 
+
 }
 
 function Restaurant(name: string, image: string, price: string, location: string, rating: number) {
@@ -75,14 +75,20 @@ function Restaurant(name: string, image: string, price: string, location: string
   this.rating = rating;
 }
 
-function Shop(name: string, image: string) {
+function Shop(name: string, image: string, price: string, location: string, rating: number) {
   this.name = name;
   this.image = image;
+  this.price = price;
+  this.location = location;
+  this.rating = rating;
 }
 
-function Activity(name: string, image: string) {
+function Activity(name: string, image: string, price: string, location: string, rating: number) {
   this.name = name;
   this.image = image;
+  this.price = price;
+  this.location = location;
+  this.rating = rating;
 }
 
 function generateRandom() {
