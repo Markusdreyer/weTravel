@@ -1,0 +1,45 @@
+page-splash {
+    ion-content {
+    background:#f9e159!important;
+    }
+    
+    .slide-zoom {
+            height:100%;
+                }
+    
+        .slide-title {
+            margin-top:2.8rem;
+            text-align:center;
+            font-size:2em;
+        }
+    
+        .slide-image {
+            max-height: 40%;
+            height:80px;
+            max-width: 60%;
+            margin: 36px 0;
+        }
+    
+        p {
+            padding: 0 40px;
+            font-size:1.2em;
+            line-height:1.5;
+        }
+
+    
+
+        .logo-wrapper {
+            padding: 2em 0;
+
+        }
+        .logo-wrapper img {
+            display: block;
+            margin: 0 auto;
+            text-align:center!important;
+        }
+
+        ion-slides {
+            max-height: 60vh;
+        }
+
+}
