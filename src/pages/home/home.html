@@ -29,17 +29,24 @@
     <h2>Restaurants</h2>
   </button>
   <hr>
-  <ion-list>
-    <ion-card *ngFor="let product of restaurants">
-      <ion-card-header>
-        <img src={{product.image}}>
-      </ion-card-header>
-      <ion-card-content>
-        <div>$$$</div>
-        <div>{{product.name}}</div>
-      </ion-card-content>
-    </ion-card>
-  </ion-list>
+  <ion-slides pager slidesPerView=2 spaceBetween=250 loop>
+    <ion-slide *ngFor=" let product of restaurants">
+      <ion-card>
+        <ion-card-header>
+          <img src={{product.image}}>
+        </ion-card-header>
+        <ion-card-content>
+          <div id="meta">
+            <div>{{product.price}}</div>
+            <ionic3-star-rating activeIcon="ios-star" defaultIcon="ios-star-outline" activeColor="#488aff" defaultColor="#f4f4f4"
+              readonly="true" rating="{{product.rating}}">
+            </ionic3-star-rating>
+          </div>
+          <h2>{{product.name}}</h2>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
 
   <button (click)="navigateToPage('ShopsPage')">
     <h2>Shops</h2>
