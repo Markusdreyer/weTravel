@@ -19,24 +19,31 @@ export class HomePage {
   constructor(public navCtrl: NavController) {
     generateRandom();
     this.restaurants = [
-      new Restaurant("Den glade gris", "../../assets/imgs/thumbnail/denGladeGrisPlaceholder.jpeg", "$$$$", "Fossveien 7, 0551 Oslo", 3),
-      new Restaurant("Edda", "../../assets/imgs/thumbnail/restaurantEddaPlaceholder.jpeg", "$$$", "Carld Berner 12, 3121 Oslo", 2),
-      new Restaurant("CheapChilli", "../../assets/imgs/restaurants/restaurant3.jpg", "$", "Konvallveien 23, 1921 Oslo", 4),
-      new Restaurant("BoulderBass", "../../assets/imgs/restaurants/restaurant4.jpg", "$$", "Platsen 31, 0541 Oslo", 1)
+      new Restaurant("Souterrain", "../../assets/imgs/thumbnail/Restaurant/crop.jpg", "$$$$", "Fossveien 7, 0551 Oslo", 3),
+      new Restaurant("Tom Lavender", "../../assets/imgs/thumbnail/Restaurant/crop1.jpg", "$", "Konvallveien 23, 1921 Oslo", 4),
+      new Restaurant("Upkvikking", "../../assets/imgs/thumbnail/Restaurant/crop2.jpg", "$$$", "Platsen 31, 0541 Oslo", 1),
+      new Restaurant("Supreme Roast", "../../assets/imgs/thumbnail/Restaurant/crop3.jpg", "$$", "Konvallveien 23, 1921 Oslo", 4),
+      new Restaurant("Luova Hangout", "../../assets/imgs/thumbnail/Restaurant/crop4.jpg", "$", "Platsen 31, 0541 Oslo", 5),
+      new Restaurant("Baker Svansen", "../../assets/imgs/thumbnail/Restaurant/crop5.jpg", "$$$", "Carld Berner 12, 3121 Oslo", 3)
+
     ];
 
     this.shops = [
-      new Shop("Antiques", "../../assets/imgs/antiques.jpg", "$$", "Platsen 31, 0541 Oslo", 1),
-      new Shop("Books", "../../assets/imgs/books.jpg", "$$", "Platsen 31, 0541 Oslo", 1),
-      new Shop("Music", "../../assets/imgs/music.jpeg", "$$", "Platsen 31, 0541 Oslo", 1),
-      new Shop("Luxury", "../../assets/imgs/luxury.jpeg", "$$", "Platsen 31, 0541 Oslo", 1)
+      new Shop("Old Quarters", "../../assets/imgs/thumbnail/Shopping/crop.jpg", "$$", "Platsen 31, 0541 Oslo", 2),
+      new Shop("ExStatic Mall", "../../assets/imgs/thumbnail/Shopping/crop1.jpg", "$$", "Platsen 31, 0541 Oslo", 3),
+      new Shop("Wing Market", "../../assets/imgs/thumbnail/Shopping/crop2.jpg", "$$", "Platsen 31, 0541 Oslo", 4),
+      new Shop("Up Close", "../../assets/imgs/thumbnail/Shopping/crop3.jpg", "$$$", "Platsen 31, 0541 Oslo", 3),
+      new Shop("Nessity Mall", "../../assets/imgs/thumbnail/Shopping/crop4.jpg", "$$$$", "Platsen 31, 0541 Oslo", 5),
+      new Shop("Kowloon Street", "../../assets/imgs/thumbnail/Shopping/crop5.jpg", "$", "Platsen 31, 0541 Oslo", 3)
+
     ];
 
     this.activities = [
-      new Activity("Driving", "../../assets/imgs/drive.jpeg", "$$", "Platsen 31, 0541 Oslo", 1),
-      new Activity("Biking", "../../assets/imgs/bike.jpeg", "$$", "Platsen 31, 0541 Oslo", 1),
-      new Activity("Football", "../../assets/imgs/football.jpeg", "$$", "Platsen 31, 0541 Oslo", 1),
-      new Activity("Golfing", "../../assets/imgs/golf.jpg", "$$", "Platsen 31, 0541 Oslo", 1)
+      new Activity("Castle Tour", "./../assets/imgs/thumbnail/Activities/crop.jpg", "$$", "Platsen 31, 0541 Oslo", 3),
+      new Activity("Golf Course", "./../assets/imgs/thumbnail/Activities/crop1.jpg", "$$$", "Platsen 31, 0541 Oslo", 5),
+      new Activity("Climbing Course", "./../assets/imgs/thumbnail/Activities/crop2.jpg", "$$$$", "Platsen 31, 0541 Oslo", 4),
+      new Activity("Holmenkollen", "./../assets/imgs/thumbnail/Activities/crop3.jpg", "$$", "Platsen 31, 0541 Oslo", 3),
+      new Activity("Tryvann Snowboarding", "./../assets/imgs/thumbnail/Activities/crop4.jpg", "$$$", "Platsen 31, 0541 Oslo", 5)
     ];
 
     this.featured = [
