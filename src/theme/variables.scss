@@ -24,7 +24,7 @@ $app-direction: ltr;
 
 $margin: 16px;
 $padding: 16px;
-
+$bg-grad: linear-gradient(55deg,#ecdf54 50%,#f9eb59 50%);
 
 // Named Color Variables
 // --------------------------------------------------
@@ -36,7 +36,7 @@ $padding: 16px;
 
 $colors: (
   primary:    #007AFF,
-  secondary:  #f9e159,
+  secondary:  #f9eb59,
   danger:     #f53d3d,
   light:      #f4f4f4,
   dark:       #222

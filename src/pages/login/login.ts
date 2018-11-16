@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { IonicPage, NavController, NavParams } from "ionic-angular";
+import { IonicPage, NavController, NavParams, ToastController, Toast } from "ionic-angular";
 import { HomePage } from "../home/home";
 import { MainPage } from "..";
 
@@ -18,9 +18,32 @@ import { MainPage } from "..";
 export class LoginPage {
   HomePage: HomePage;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+  constructor(public navCtrl: NavController, public navParams: NavParams,private toastCtrl: ToastController) {}
 
   navigateToPage() {
     this.navCtrl.push(MainPage);
   }
+  presentToast() {
+    let toast = this.toastCtrl.create({
+      message: 'Authenticating...',
+      duration:3000,
+      position: 'top'
+    });
+  
+    toast.onDidDismiss(() => {
+      console.log('Dismissed login notice');
+    });
+  
+  
+  
+  toast.present();
+  setTimeout(() => {
+    toast.setMessage('Logged in!');
+    toast.setDuration(2000);
+  },1000);
+  
 }
+
+}
+
+

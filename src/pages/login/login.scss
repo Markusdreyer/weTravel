@@ -2,6 +2,7 @@ page-login {
 
     ion-content {
         display: flex;
+        background: $bg-grad!important;
     }
 
     ion-card {
@@ -14,15 +15,45 @@ page-login {
         align-items: center;
     }
 
+    .wechatlogo {
+        height: 24px;
+        width:auto;
+        display: inline-block;
+    }
+
     button {
-        border: 1px solid grey;
+        /*border: 1px solid grey;
         width: 70%;
         height: 10%;
         margin: 8px;
-        font-size: 18.5px;
+        font-size: 18.5px;*/
+        width: 100%;
+    }
+
+    .login-form,ion-grid,ion-row {
+        height: 100%;
+        max-height:50vh;
+    }
+
+    .login-form {
+        width: 100%;
+        padding-top:10em;
+    }
+
+    .login-form ion-item {
+        background: transparent;
+        border-top:none!important;
+        border-bottom:2px solid color($colors,primary)!important;
+    }
+
+    ion-list,
+    ion-list ion-item, ion-item ion-input {
+        width: 100%;
     }
 
     button:active {
         background-color: lightgray;
     }
+
+    
 }
