@@ -1,5 +1,4 @@
 page-login {
-
     ion-content {
         display: flex;
     }
@@ -12,6 +11,8 @@ page-login {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+
     }
 
     button {

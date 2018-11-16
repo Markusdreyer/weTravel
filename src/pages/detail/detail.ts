@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, Events } from 'ionic-angular';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Dto } from '../home/DTO';
-import { HomePageModule } from '../home/home.module';
-import {StarRatingModule } from 'ionic3-star-rating';
 /**
  * Generated class for the DetailPage page.
  *
@@ -17,13 +15,9 @@ import {StarRatingModule } from 'ionic3-star-rating';
 })
 export class DetailPage {
   product: Dto;
-  rating: Dto;
-  
-
-  constructor(public navCtrl: NavController, 
+  constructor(public navCtrl: NavController,
     public navParams: NavParams) {
     this.product = navParams.get('data');
-    this.rating = navParams.get('data');
     console.log(this.product);
     //this.product.rating = this.rating;
   }

@@ -14,7 +14,7 @@ export interface Slide {
 })
 export class SplashPage {
   slides: Slide[];
-  showSkip = true;
+  showSkip = false;
 
   constructor(public navCtrl: NavController, public menu: MenuController, public platform: Platform) {
     this.slides = [

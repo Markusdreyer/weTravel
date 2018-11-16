@@ -12,20 +12,31 @@ page-detail {
         text-align: center;
         border-bottom: 1px solid black; 
     }
-    
-    #detail-container {
-        font-family: Arial, Helvetica, sans-serif;
-        display: flex;
-        flex-direction: column;
+
+    ionic3-star-rating {
+        transform: scale(0.8);
     }
 
+    #icon {
+        margin-top: 10px;
+        transform: scale(2);
+    }
+
+    div {
+        border: 2px solid black;
+    }
+    
     .row {
-        width: 100%;
-        height: 25px;
+        display: flex;
+        flex-wrap: nowrap;
         justify-content: space-between;
+    }
+
+    #address-container {
+        display: flex;
+        flex-wrap: nowrap;
         p {
-            font-size: 16px;
-            font-weight: 200;
+            margin-bottom: 0 !important;
         }
     }
 
