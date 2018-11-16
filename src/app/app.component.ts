@@ -40,7 +40,9 @@ export class MyApp {
     { title: 'ActivitiesPage', component: 'ActivitiesPage' },
     { title: 'DetailPage', component: 'DetailPage' },
     { title: 'RestaurantsPage', component: 'RestaurantsPage' },
-    { title: 'ShopsPage', component: 'ShopsPage' }
+    { title: 'ShopsPage', component: 'ShopsPage' },
+    { title: 'BookmarksPage', component: 'BookmarksPage' }
+
   ]
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
