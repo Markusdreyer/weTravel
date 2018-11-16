@@ -14,6 +14,13 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
+@font-face {
+  font-family: 'special-elite';
+  src: url('../assets/fonts/special-elite.woff2') format("woff2"), url('special-elite-webfont.woff') format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 h1 {
   font-size: 25px;
   margin: 15px 15px 15px 15px !important;
