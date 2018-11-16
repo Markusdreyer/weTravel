@@ -11,6 +11,15 @@ page-home {
     background-color: whitesmoke;
   }
 
+  .ionic3-star-rating {
+    display: flex;
+    flex-wrap: nowrap;
+    transform: scale(0.4);
+    margin-top: -3.5vh;
+    margin-right: -11vw; 
+
+  }
+
   ion-slides {
     height: 50%;
     
