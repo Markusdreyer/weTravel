@@ -4,10 +4,10 @@ import { BookmarksPage } from './bookmarks';
 
 @NgModule({
   declarations: [
-    BookmarksPage,
+    BookmarksPage
   ],
   imports: [
     IonicPageModule.forChild(BookmarksPage),
   ],
 })
-export class BookmarksPageModule {}
+export class BookmarksPageModule { }

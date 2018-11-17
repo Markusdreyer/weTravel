@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { NavController, IonicPage } from "ionic-angular";
+import { NavController, IonicPage, NavParams } from "ionic-angular";
 import { Dto } from "./Dto";
 
 
@@ -15,35 +15,37 @@ export class HomePage {
   activities: any[];
   featured: any[];
   randomNumbers = generateRandom();
+  user: string;
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, 
+    private navParams:NavParams) {
     generateRandom();
     this.restaurants = [
-      new Restaurant("Souterrain", "../../assets/imgs/thumbnail/Restaurant/crop.jpg", "$$$$", "Fossveien 7, 0551 Oslo", 3),
-      new Restaurant("Tom Lavender", "../../assets/imgs/thumbnail/Restaurant/crop1.jpg", "$", "Konvallveien 23, 1921 Oslo", 4),
-      new Restaurant("Upkvikking", "../../assets/imgs/thumbnail/Restaurant/crop2.jpg", "$$$", "Platsen 31, 0541 Oslo", 1),
-      new Restaurant("Supreme Roast", "../../assets/imgs/thumbnail/Restaurant/crop3.jpg", "$$", "Konvallveien 23, 1921 Oslo", 4),
-      new Restaurant("Luova Hangout", "../../assets/imgs/thumbnail/Restaurant/crop4.jpg", "$", "Platsen 31, 0541 Oslo", 5),
-      new Restaurant("Baker Svansen", "../../assets/imgs/thumbnail/Restaurant/crop5.jpg", "$$$", "Carld Berner 12, 3121 Oslo", 3)
+      new Restaurant("Souterrain", "../../assets/imgs/thumbnail/Restaurant/crop.jpg", "$$$$", "Fossveien 7,", "0551 Oslo", "3", "09-18"),
+      new Restaurant("Tom Lavender", "../../assets/imgs/thumbnail/Restaurant/crop1.jpg", "$", "Konvallveien 23,", "1921 Oslo", "4", "09-18"),
+      new Restaurant("Upkvikking", "../../assets/imgs/thumbnail/Restaurant/crop2.jpg", "$$$", "Platsen 31,", "0541 Oslo", "1", "09-18"),
+      new Restaurant("Supreme Roast", "../../assets/imgs/thumbnail/Restaurant/crop3.jpg", "$$", "Konvallveien 23,", "1921 Oslo", "4", "09-18"),
+      new Restaurant("Luova Hangout", "../../assets/imgs/thumbnail/Restaurant/crop4.jpg", "$", "Platsen 31,", "0541 Oslo", "5", "09-18"),
+      new Restaurant("Baker Svansen", "../../assets/imgs/thumbnail/Restaurant/crop5.jpg", "$$$", "Carld Berner 12,", "3121 Oslo", "3", "09-18")
 
     ];
 
     this.shops = [
-      new Shop("Old Quarters", "../../assets/imgs/thumbnail/Shopping/crop.jpg", "$$", "Platsen 31, 0541 Oslo", 2),
-      new Shop("ExStatic Mall", "../../assets/imgs/thumbnail/Shopping/crop1.jpg", "$$", "Platsen 31, 0541 Oslo", 3),
-      new Shop("Wing Market", "../../assets/imgs/thumbnail/Shopping/crop2.jpg", "$$", "Platsen 31, 0541 Oslo", 4),
-      new Shop("Up Close", "../../assets/imgs/thumbnail/Shopping/crop3.jpg", "$$$", "Platsen 31, 0541 Oslo", 3),
-      new Shop("Nessity Mall", "../../assets/imgs/thumbnail/Shopping/crop4.jpg", "$$$$", "Platsen 31, 0541 Oslo", 5),
-      new Shop("Kowloon Street", "../../assets/imgs/thumbnail/Shopping/crop5.jpg", "$", "Platsen 31, 0541 Oslo", 3)
+      new Shop("Old Quarters", "../../assets/imgs/thumbnail/Shopping/crop.jpg", "$$", "Platsen 31,", "0541 Oslo", "2", "09-18"),
+      new Shop("ExStatic Mall", "../../assets/imgs/thumbnail/Shopping/crop1.jpg", "$$", "Platsen 31,", "0541 Oslo", "3", "09-18"),
+      new Shop("Wing Market", "../../assets/imgs/thumbnail/Shopping/crop2.jpg", "$$", "Platsen 31,", "0541 Oslo", "4", "09-18"),
+      new Shop("Up Close", "../../assets/imgs/thumbnail/Shopping/crop3.jpg", "$$$", "Platsen 31,", "0541 Oslo", "3", "09-18"),
+      new Shop("Nessity Mall", "../../assets/imgs/thumbnail/Shopping/crop4.jpg", "$$$$", "Platsen 31,", "0541 Oslo", "5", "09-18"),
+      new Shop("Kowloon Street", "../../assets/imgs/thumbnail/Shopping/crop5.jpg", "$", "Platsen 31,", "0541 Oslo", "3", "09-18")
 
     ];
 
     this.activities = [
-      new Activity("Castle Tour", "./../assets/imgs/thumbnail/Activities/crop.jpg", "$$", "Platsen 31, 0541 Oslo", 3),
-      new Activity("Golf Course", "./../assets/imgs/thumbnail/Activities/crop1.jpg", "$$$", "Platsen 31, 0541 Oslo", 5),
-      new Activity("Climbing Course", "./../assets/imgs/thumbnail/Activities/crop2.jpg", "$$$$", "Platsen 31, 0541 Oslo", 4),
-      new Activity("Holmenkollen", "./../assets/imgs/thumbnail/Activities/crop3.jpg", "$$", "Platsen 31, 0541 Oslo", 3),
-      new Activity("Tryvann Snowboarding", "./../assets/imgs/thumbnail/Activities/crop4.jpg", "$$$", "Platsen 31, 0541 Oslo", 5)
+      new Activity("Castle Tour", "./../assets/imgs/thumbnail/Activities/crop.jpg", "$$", "Platsen 31,", "0541 Oslo", "3", "09-18"),
+      new Activity("Golf Course", "./../assets/imgs/thumbnail/Activities/crop1.jpg", "$$$", "Platsen 31,", "0541 Oslo", "5", "09-18"),
+      new Activity("Climbing Course", "./../assets/imgs/thumbnail/Activities/crop2.jpg", "$$$$", "Platsen 31,", "0541 Oslo", "4", "09-18"),
+      new Activity("Holmenkollen", "./../assets/imgs/thumbnail/Activities/crop3.jpg", "$$", "Platsen 31,", "0541 Oslo", "3", "09-18"),
+      new Activity("Tryvann Snowboarding", "./../assets/imgs/thumbnail/Activities/crop4.jpg", "$$$", "Platsen 31,", "0541 Oslo", "5", "09-18")
     ];
 
     this.featured = [
@@ -52,10 +54,13 @@ export class HomePage {
       this.activities[this.randomNumbers[2]],
       this.activities[this.randomNumbers[3]]
     ];
+
+    this.user = ' ' + this.navParams.get('user');
+
   }
 
   navigateToPage(pageName, product) {
-    let dto = new Dto(product.name, product.image, product.price, product.location, product.rating);
+    let dto = new Dto(product.name, product.image, product.price, product.location, product.zip, product.rating, product.hours);
     this.navCtrl.push(pageName, {
       data: dto
     });
@@ -71,31 +76,36 @@ export class HomePage {
     this.navCtrl.swipeBackEnabled = false;
   }
 
-
 }
 
-function Restaurant(name: string, image: string, price: string, location: string, rating: number) {
+function Restaurant(name: string, image: string, price: string, location: string, zip: string, rating: string, hours: string) {
   this.name = name;
   this.image = image;
   this.price = price;
   this.location = location;
+  this.zip = zip;
   this.rating = rating;
+  this.hours = hours;
 }
 
-function Shop(name: string, image: string, price: string, location: string, rating: number) {
+function Shop(name: string, image: string, price: string, location: string, zip: string, rating: string, hours: string) {
   this.name = name;
   this.image = image;
   this.price = price;
   this.location = location;
+  this.zip = zip;
   this.rating = rating;
+  this.hours = hours;
 }
 
-function Activity(name: string, image: string, price: string, location: string, rating: number) {
+function Activity(name: string, image: string, price: string, location: string, zip: string, rating: string, hours: string) {
   this.name = name;
   this.image = image;
   this.price = price;
   this.location = location;
+  this.zip = zip;
   this.rating = rating;
+  this.hours = hours;
 }
 
 function generateRandom() {

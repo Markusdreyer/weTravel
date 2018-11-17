@@ -1,5 +1,4 @@
 page-login {
-
     ion-content {
         display: flex;
         background: $bg-grad!important;
@@ -13,12 +12,18 @@ page-login {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+
     }
 
     .wechatlogo {
         height: 24px;
         width:auto;
         display: inline-block;
+    }
+
+    ion-label span.required {
+        color:color($colors,danger);
     }
 
     button {
@@ -40,11 +45,13 @@ page-login {
         padding-top:10em;
     }
 
+    .login-form ion-item.ng-untouched.item-input {
+        border-bottom:2px solid color($colors,primary);
+    }
     .login-form ion-item {
         background: transparent;
         border-top:none!important;
-        border-bottom:2px solid color($colors,primary)!important;
-    }
+        }
 
     ion-list,
     ion-list ion-item, ion-item ion-input {

@@ -1,5 +1,5 @@
 <ion-content padding>
-  <h1 page-title>What would you like to do?</h1>
+  <h1 page-title>Hi{{user}}, what would you like to do?</h1>
   <div>
     <input placeholder="Search">
   </div>
@@ -19,7 +19,7 @@
                 <ionic3-star-rating activeIcon="ios-star" defaultIcon="ios-star-outline" activeColor="#488aff"
                   defaultColor="#007AFF" readonly="true" rating="{{product.rating}}">
                 </ionic3-star-rating>
-                <div>{{product.name}}</div>
+                <h3>{{product.name}}</h3>
               </ion-card-content>
             </ion-card>
           </ion-col>
@@ -28,9 +28,7 @@
     </ion-list>
   </div>
 
-  <button (click)="navigateToPage('RestaurantsPage')">
-    <h2>Restaurants</h2>
-  </button>
+  <h2>Restaurants</h2>
   <hr>
   <ion-slides pager slidesPerView=2 spaceBetween=250 loop>
     <ion-slide *ngFor="let product of restaurants">
@@ -45,15 +43,13 @@
               readonly="true" rating="{{product.rating}}">
             </ionic3-star-rating>
           </div>
-          <h2>{{product.name}}</h2>
+          <h3>{{product.name}}</h3>
         </ion-card-content>
       </ion-card>
     </ion-slide>
   </ion-slides>
 
-  <button (click)="navigateToPage('RestaurantsPage')">
-    <h2>Shops</h2>
-  </button>
+  <h2>Shops</h2>
   <hr>
   <ion-slides pager slidesPerView=2 spaceBetween=250 loop>
     <ion-slide *ngFor=" let product of shops">
@@ -68,15 +64,13 @@
               readonly="true" rating="{{product.rating}}">
             </ionic3-star-rating>
           </div>
-          <h2>{{product.name}}</h2>
+          <h3>{{product.name}}</h3>
         </ion-card-content>
       </ion-card>
     </ion-slide>
   </ion-slides>
 
-  <button (click)="navigateToPage('RestaurantsPage')">
-    <h2>Sightseeing</h2>
-  </button>
+  <h2>Activities</h2>
   <hr>
   <ion-slides pager slidesPerView=2 spaceBetween=250 loop>
     <ion-slide *ngFor=" let product of activities">
@@ -91,10 +85,9 @@
               readonly="true" rating="{{product.rating}}">
             </ionic3-star-rating>
           </div>
-          <h2>{{product.name}}</h2>
+          <h3>{{product.name}}</h3>
         </ion-card-content>
       </ion-card>
     </ion-slide>
   </ion-slides>
-
 </ion-content>
