@@ -2,25 +2,43 @@
   <ion-navbar>
     <ion-title>Detail</ion-title>
   </ion-navbar>
-  <img id="background-image" src="{{product.image}}">
 </ion-header>
 <ion-content padding>
+  <ion-icon *ngIf=(this.bookmarked) id="bookmark" ios="ios-bookmark" md="md-bookmark"></ion-icon>
+  <img id="background-image" src="{{product.image}}">
   <h1>{{product.name}}</h1>
-  <div id="detail-container">
+  <div id="content-container">
     <div class="row">
-      <ion-icon id="icon" name="time"></ion-icon>
-      <p>10 - 18</p>
+      <div id="detail-container">
+        <ion-icon id="icon" style="transform: scale(1.4); margin-top: 10px;" name="time"></ion-icon>
+        <div id="detail">
+          <p style="margin-top: 6px; margin-left: 3px;">{{product.hours}}</p>
+        </div>
+      </div>
       <ionic3-star-rating activeIcon="ios-star" defaultIcon="ios-star-outline" activeColor="#488aff" defaultColor="#007AFF"
         readonly="true" rating="{{product.rating}}">
       </ionic3-star-rating>
     </div>
     <div class="row">
-      <div id="address-container">
-        <ion-icon id="icon" name="pin"></ion-icon>
-        <p style="margin-bottom: 0;">{{product.location}}</p>
-        <p style="margin-top: 0;">{{product.zip}}</p>
+      <div id="detail-container">
+        <ion-icon id="icon" style="transform: scale(1.8); margin-top: 19px;" name="pin"></ion-icon>
+        <div id="detail">
+          <p style="margin-bottom: 0; margin-top: 2px; margin-left: 5px;">{{product.location}}</p>
+          <p style="margin-top: 0; margin-left: 5px;">{{product.zip}}</p>
+        </div>
       </div>
-      <p>{{product.price}}</p>
+      <button id="bookmark-button" (click)="bookmark()" ion-button>{{this.bookmarkText}}</button>
     </div>
   </div>
+
+  <div id="description">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  </div>
+
+  <ion-slides pager loop>
+    <ion-slide *ngFor="let picture of gallery">
+      <img src={{picture}}>
+    </ion-slide>
+  </ion-slides>
 </ion-content>

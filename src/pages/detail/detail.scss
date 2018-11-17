@@ -1,7 +1,28 @@
 page-detail {
+    font-family: $font-family;
+
+    #bookmark {
+        position: absolute;
+        transform: scale(4);
+        margin-top: 32px;
+        margin-left: 290px;
+        
+    }
+
+    #bookmark-button {
+        width: 35%;
+        height: 35px;
+        margin-right: 20px !important;
+    }
+
+    .ion-ios-bookmark:before {
+        content: "\f12e";
+        color: color($colors, primary);
+    }
+
     #background-image {
-        width: 100%;
-        height: 10%;
+        margin-top: 15px;
+        height: 40%;
     }
 
     .scroll-content {
@@ -14,16 +35,12 @@ page-detail {
     }
 
     ionic3-star-rating {
+        margin-top: -8px;
         transform: scale(0.8);
     }
 
-    #icon {
-        margin-top: 10px;
-        transform: scale(2);
-    }
-
     div {
-        border: 2px solid black;
+        //border: 2px solid black;
     }
     
     .row {
@@ -32,12 +49,37 @@ page-detail {
         justify-content: space-between;
     }
 
-    #address-container {
+    #detail-container {
         display: flex;
-        flex-wrap: nowrap;
-        p {
-            margin-bottom: 0 !important;
+        flex-direction: row;
+        margin-left: 17px;
+        #detail {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            margin-left: 8px;
         }
     }
 
+    #description {
+        margin-top: 15px;
+        font-size: 16.5px;
+    }
+
+    ion-slides {
+        margin-top: -15px;
+        height: 50%;
+        ion-slide {
+            img {
+                transform: scale(1.5);
+                width: 50vw !important;
+                filter: blur(1px);
+            }
+        }
+    }
+    .swiper-slide-active {
+        img {
+          filter: blur(0);
+        }
+      }
 }

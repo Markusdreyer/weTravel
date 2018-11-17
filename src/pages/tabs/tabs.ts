@@ -21,16 +21,16 @@ export class TabsPage {
 
   tab1Title = "Home";
   tab2Title = "Browse";
-  tab3Title = "Planner";
+  tab3Title = "Bookmarks";
 
   constructor(public navCtrl: NavController) {
-    
+
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad TabsPage');
   }
 
-  
+
 
 }
