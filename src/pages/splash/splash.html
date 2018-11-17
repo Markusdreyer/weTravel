@@ -4,10 +4,29 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
+<<<<<<< HEAD
+=======
+<!--<ion-header no-shadow>
+
+  <ion-navbar>
+    <ion-title></ion-title>
+    <ion-buttons end *ngIf="showSkip">
+      <button ion-button (click)="startApp()">Skip</button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>-->
+
+<ion-header>
+  
+</ion-header>
+
+
+>>>>>>> ad5ac3b032a85174bf366f638a8e47c54f78825d
 <ion-content no-bounce no-padding>
   <div class="logo-wrapper">
     <img src="/assets/imgs/logo.png" />
   </div>
+<<<<<<< HEAD
   <ion-slides pager="true" (ionSlideWillChange)="onSlideChangeStart($event)">
     <ion-slide *ngFor="let slide of slides">
       <img [src]="slide.image" class="slide-image" />
@@ -24,3 +43,21 @@
     </ion-slide>
   </ion-slides>
 </ion-content>
+=======
+    <ion-slides pager="true" (ionSlideWillChange)="onSlideChangeStart($event)">
+      <ion-slide *ngFor="let slide of slides">
+       <img [src]="slide.image" class="slide-image" />
+        <p [innerHTML]="slide.description"></p>
+      </ion-slide>
+      <ion-slide>
+        <!--<img src="assets/imgs/..." class="slide-image" />-->
+        <h2 class="slide-title"></h2>
+        <p> <br/><br/>Thank you for using our App, and we hope you have a pleasant trip in Oslo.</p>
+        <button ion-button icon-end large clear (click)="startApp()">
+         Continue
+          <ion-icon name="arrow-forward"></ion-icon>
+        </button>
+      </ion-slide>
+    </ion-slides>
+  </ion-content>
+>>>>>>> ad5ac3b032a85174bf366f638a8e47c54f78825d

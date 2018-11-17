@@ -1,10 +1,36 @@
 <ion-content no-bounce padding>
-  <ion-card>
-    <button (click)="navigateToPage()">
-      Login using weChat
+  <!--<ion-card>
+    <button ion-button outline round large (click)="navigateToPage();presentToast()">
+      Log in using weChat &nbsp;<span><img 
+        src='assets/imgs/login/wechat-logo.png' 
+        class='wechatlogo' /></span>
+      
     </button>
-    <button (click)="navigateToPage()">
+    <button ion-button round large color="secondary" (click)="navigateToPage()">
       Continue as guest
     </button>
-  </ion-card>
+  </ion-card>-->
+  <div class="login-form">
+    <ion-grid>
+      <ion-row >
+  <ion-list>
+
+      <ion-item>
+        <ion-label floating>Your name <ion-icon name="person"></ion-icon></ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+    
+    </ion-list>
+    <button ion-button outline round large (click)="navigateToPage();presentToast()">
+        Log in using weChat &nbsp;<span><img 
+          src='assets/imgs/login/wechat-logo.png' 
+          class='wechatlogo' /></span>
+        
+      </button>
+      <button ion-button round large  (click)="navigateToPage();presentToast()">
+        Continue as guest
+      </button>
+    </ion-row>
+    </ion-grid>
+    </div>
 </ion-content>

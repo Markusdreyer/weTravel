@@ -1,6 +1,10 @@
 page-splash {
     ion-content {
-    background: color($colors, secondary) !important;
+
+    h2,p {
+        font-family: 'special-elite', cursive;
+    }    
+    background: $bg-grad!important;
     }
     
     .slide-zoom {
@@ -8,38 +12,65 @@ page-splash {
                 }
     
         .slide-title {
-            margin-top:2.8rem;
+            margin-top:2rem;
             text-align:center;
-            font-size:2em;
+            font-size:18px;
         }
     
         .slide-image {
             max-height: 40%;
-            height:80px;
+            height:60px;
             max-width: 60%;
-            margin: 36px 0;
+            margin: 0 auto;
         }
     
         p {
             padding: 0 40px;
-            font-size:1.2em;
+            font-size:16px;
             line-height:1.5;
         }
 
     
 
         .logo-wrapper {
-            padding: 2em 0;
+            padding: 3em 0 0;
+            width:30vw;
+            margin: 0 auto;
 
         }
         .logo-wrapper img {
             display: block;
             margin: 0 auto;
+            width:100%;
+            height:auto;
             text-align:center!important;
         }
 
+        img.arrow {
+            clear:both;
+            display:block;
+            text-align:center;
+            margin:0 auto;
+            height:32px;
+        }
+
         ion-slides {
-            max-height: 60vh;
+            max-height:  100%;
+            
+        }
+
+        .slides {
+            height:auto;
+        }
+
+        ion-slides ion-slide {
+            padding: 0 1em!important;
+
+        }
+
+        .swiper-pagination {
+            //position:fixed!important;
+
         }
 
 }
