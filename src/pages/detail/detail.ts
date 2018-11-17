@@ -14,6 +14,7 @@ import { Dto } from '../home/Dto';
   templateUrl: 'detail.html',
 })
 export class DetailPage {
+  testProduct = {};
   product: Dto;
   gallery: any[];
   reviews: any[];
@@ -23,7 +24,6 @@ export class DetailPage {
   constructor(public navCtrl: NavController,
     public navParams: NavParams, public events: Events) {
     this.product = navParams.get('data');
-    console.log(this.product);
 
     this.gallery = [
       "../../assets/imgs/thumbnail/Restaurant/gallery/crop1.jpg",
@@ -34,7 +34,6 @@ export class DetailPage {
   }
 
   bookmark() {
-    this.events.publish('product', this.product);
     this.bookmarked = !this.bookmarked;
     if (this.bookmarked === true) {
       this.bookmarkText = "Unmark";
