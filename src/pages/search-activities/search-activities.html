@@ -1,0 +1,25 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>SearchActivities</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card *ngFor="let activity of activities">
+    <img src={{activity.image}}/>
+    <ion-card-content>
+      <ion-card-title>
+        {{activity.name}}
+      </ion-card-title>
+      <p>
+        {{activity.price}}
+        {{activity.location}}
+        {{activity.rating}}
+      </p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

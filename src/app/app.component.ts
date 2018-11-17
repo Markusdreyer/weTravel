@@ -40,7 +40,17 @@ export class MyApp {
     { title: 'DetailPage', component: 'DetailPage' },
     { title: 'RestaurantsPage', component: 'RestaurantsPage' },
     { title: 'ShopsPage', component: 'ShopsPage' },
-    { title: 'BookmarksPage', component: 'BookmarksPage' }
+    { title: 'BookmarksPage', component: 'BookmarksPage' },
+    { title: 'SearchPage', component: 'SearchPage' },
+    { title: 'SearchActivitiesPage', component: 'SearchActivitiesPage' },
+    { title: 'SearchAllPage', component: 'SearchAllPage' },
+    { title: 'SearchRestaurantPage', component: 'SearchRestaurantPage' },
+    { title: 'SearchShoppingPage', component: 'SearchShoppingPage' },
+
+
+
+
+
 
   ]
 

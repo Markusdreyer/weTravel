@@ -1,0 +1,25 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>All Shopping Options</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card *ngFor="let shopping of shops">
+    <img src={{shopping.image}}/>
+    <ion-card-content>
+      <ion-card-title>
+        {{shopping.name}}
+      </ion-card-title>
+      <p>
+        {{shopping.price}}
+        {{shopping.location}}
+        {{shopping.rating}}
+      </p>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

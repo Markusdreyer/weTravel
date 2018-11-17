@@ -1,0 +1,25 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>All Restaurant Options</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card *ngFor="let restaurant of restaurants">
+    <img src={{restaurant.image}}/>
+    <ion-card-content>
+      <ion-card-title>
+        {{restaurant.name}}
+      </ion-card-title>
+      <p>
+        {{restaurant.price}}
+        {{restaurant.location}}
+        {{restaurant.rating}}
+      </p>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
