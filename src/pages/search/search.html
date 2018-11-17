@@ -11,21 +11,12 @@
 <ion-content>
 
   <ion-list>
-
-    <ion-item>
-      <ion-thumbnail item-start>
-        <img src="../../assets/imgs/logo.png">
-      </ion-thumbnail>
-      <h2>Browse All</h2>
-      <button ion-button clear item-end>View</button>
-    </ion-item>
-
     <ion-item>
       <ion-thumbnail item-start>
         <img src="../../assets/imgs/splash/simplefastfoodicon.png">
       </ion-thumbnail>
       <h2>Restaurants</h2>
-      <button ion-button clear item-end>View</button>
+      <button ion-button clear item-end (click)="navigateToPage('SearchRestaurantPage')">View</button>
     </ion-item>
 
     <ion-item>
@@ -33,7 +24,7 @@
         <img src="../../assets/imgs/splash/shopping_bag.png">
       </ion-thumbnail>
       <h2>Shopping</h2>
-      <button ion-button clear item-end>View</button>
+      <button ion-button clear item-end (click)="navigateToPage2('SearchShoppingPage')">View</button>
     </ion-item>
 
     <ion-item>
@@ -41,10 +32,8 @@
         <img src="../../assets/imgs/splash/sightseeing.png">
       </ion-thumbnail>
       <h2>Sightseeing</h2>
-      <button ion-button clear item-end>View</button>
+      <button ion-button clear item-end (click)="navigateToPage3('SearchActivitiesPage')">View</button>
     </ion-item>
-
-
   </ion-list>
 
 </ion-content>
