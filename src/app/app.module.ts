@@ -1,3 +1,4 @@
+import { BookmarksPage } from './../pages/bookmarks/bookmarks';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -16,6 +17,8 @@ import { MyApp } from './app.component';
     MyApp,
     //LoginPage,
     //HomePage
+    BookmarksPage
+
   ],
   imports: [
     BrowserModule,
@@ -24,6 +27,7 @@ import { MyApp } from './app.component';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    BookmarksPage
     //LoginPage,
     //HomePage
   ],

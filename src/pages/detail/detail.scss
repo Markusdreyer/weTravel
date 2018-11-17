@@ -1,7 +1,28 @@
 page-detail {
+    font-family: $font-family;
+
+    #bookmark {
+        position: absolute;
+        transform: scale(4);
+        margin-top: 32px;
+        margin-left: 290px;
+        
+    }
+
+    #bookmark-button {
+        width: 35%;
+        height: 35px;
+        margin-right: 20px !important;
+    }
+
+    .ion-ios-bookmark:before {
+        content: "\f12e";
+        color: color($colors, primary);
+    }
+
     #background-image {
-        width: 100%;
-        height: 10%;
+        margin-top: 15px;
+        height: 40%;
     }
 
     .scroll-content {
@@ -12,20 +33,31 @@ page-detail {
         text-align: center;
         border-bottom: 1px solid black; 
     }
-    
-    #detail-container {
-        font-family: Arial, Helvetica, sans-serif;
-        display: flex;
-        flex-direction: column;
+
+    ionic3-star-rating {
+        margin-top: -8px;
+        transform: scale(0.8);
     }
 
+    div {
+        //border: 2px solid black;
+    }
+    
     .row {
-        width: 100%;
-        height: 25px;
+        display: flex;
+        flex-wrap: nowrap;
         justify-content: space-between;
-        p {
-            font-size: 16px;
-            font-weight: 200;
+    }
+
+    #detail-container {
+        display: flex;
+        flex-direction: row;
+        margin-left: 17px;
+        #detail {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            margin-left: 8px;
         }
         .price-level {
             font-weight:700;
@@ -38,4 +70,25 @@ page-detail {
         }
     }
 
+    #description {
+        margin-top: 15px;
+        font-size: 16.5px;
+    }
+
+    ion-slides {
+        margin-top: -15px;
+        height: 50%;
+        ion-slide {
+            img {
+                transform: scale(1.5);
+                width: 50vw !important;
+                filter: blur(1px);
+            }
+        }
+    }
+    .swiper-slide-active {
+        img {
+          filter: blur(0);
+        }
+      }
 }

@@ -35,12 +35,13 @@ export class TabsPage {
     this.loginParam = navParams.get('data');
     this.tab1Params = {user:navParams.get('data')};
     
-  }
 
+    }
+    
   ionViewDidLoad() {
     console.log('ionViewDidLoad TabsPage');
   }
 
-  
+
 
 }
