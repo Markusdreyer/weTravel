@@ -17,7 +17,6 @@ import { MyApp } from './app.component';
     MyApp,
     //LoginPage,
     //HomePage
-    BookmarksPage
 
   ],
   imports: [
@@ -26,8 +25,7 @@ import { MyApp } from './app.component';
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp,
-    BookmarksPage
+    MyApp
     //LoginPage,
     //HomePage
   ],
