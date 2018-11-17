@@ -10,11 +10,7 @@ import { MyApp } from './app.component';
 
 @NgModule({
   declarations: [
-    MyApp,
-
-    //LoginPage,
-    //HomePage
-
+    MyApp
   ],
   imports: [
     BrowserModule,
@@ -22,8 +18,7 @@ import { MyApp } from './app.component';
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    //LoginPage,
-    //HomePage
+    MyApp
   ],
   providers: [
     StatusBar,

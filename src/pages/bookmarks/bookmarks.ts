@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Events } from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -14,4 +14,6 @@ export class BookmarksPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
+
+
 }

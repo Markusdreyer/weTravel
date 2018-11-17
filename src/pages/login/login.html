@@ -22,13 +22,13 @@
     </form>
   </ion-list>
    
-    <button ion-button outline round large type="submit" [disabled]="!login.valid" (click)="navigateToPage();presentToast();">
+    <button ion-button outline large type="submit" [disabled]="!login.valid" (click)="navigateToPage();presentToast();">
         Log in using weChat &nbsp;<span><img 
           src='assets/imgs/login/wechat-logo.png' 
           class='wechatlogo' /></span>
         
       </button>
-      <button ion-button round large  type="submit" [disabled]="!login.valid" (click)="navigateToPage();presentToast();">
+      <button ion-button large  type="submit" [disabled]="!login.valid" (click)="navigateToPage();presentToast();">
         Continue as guest
       </button>
 
