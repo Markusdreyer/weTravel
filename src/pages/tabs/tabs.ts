@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { Tab1Root, Tab2Root, Tab3Root } from '../';
 /**
@@ -15,6 +15,9 @@ import { Tab1Root, Tab2Root, Tab3Root } from '../';
   templateUrl: 'tabs.html',
 })
 export class TabsPage {
+  loginParam: string;
+
+
   tab1Root: any = Tab1Root;
   tab2Root: any = Tab2Root;
   tab3Root: any = Tab3Root;
@@ -23,10 +26,18 @@ export class TabsPage {
   tab2Title = "Browse";
   tab3Title = "Bookmarks";
 
-  constructor(public navCtrl: NavController) {
+  tab1Params = {};
 
-  }
+  
 
+  constructor(public navCtrl: NavController,
+    public navParams: NavParams) {
+    this.loginParam = navParams.get('data');
+    this.tab1Params = {user:navParams.get('data')};
+    
+
+    }
+    
   ionViewDidLoad() {
     console.log('ionViewDidLoad TabsPage');
   }

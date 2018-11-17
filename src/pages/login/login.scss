@@ -22,6 +22,10 @@ page-login {
         display: inline-block;
     }
 
+    ion-label span.required {
+        color:color($colors,danger);
+    }
+
     button {
         /*border: 1px solid grey;
         width: 70%;
@@ -41,11 +45,13 @@ page-login {
         padding-top:10em;
     }
 
+    .login-form ion-item.ng-untouched.item-input {
+        border-bottom:2px solid color($colors,primary);
+    }
     .login-form ion-item {
         background: transparent;
         border-top:none!important;
-        border-bottom:2px solid color($colors,primary)!important;
-    }
+        }
 
     ion-list,
     ion-list ion-item, ion-item ion-input {

@@ -25,7 +25,11 @@ import { MyApp } from './app.component';
   ],
   bootstrap: [IonicApp],
   entryComponents: [
+<<<<<<< HEAD
     MyApp,
+=======
+    MyApp
+>>>>>>> 5637112b16e407f27f890c316796aaa930db2a4f
     //LoginPage,
     //HomePage
   ],

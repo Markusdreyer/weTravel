@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { NavController, IonicPage } from "ionic-angular";
+import { NavController, IonicPage, NavParams } from "ionic-angular";
 import { Dto } from "./Dto";
 
 
@@ -15,8 +15,10 @@ export class HomePage {
   activities: any[];
   featured: any[];
   randomNumbers = generateRandom();
+  user: string;
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, 
+    private navParams:NavParams) {
     generateRandom();
     this.restaurants = [
       new Restaurant("Souterrain", "../../assets/imgs/thumbnail/Restaurant/crop.jpg", "$$$$", "Fossveien 7,", "0551 Oslo", "3", "09-18"),
@@ -52,6 +54,9 @@ export class HomePage {
       this.activities[this.randomNumbers[2]],
       this.activities[this.randomNumbers[3]]
     ];
+
+    this.user = ' ' + this.navParams.get('user');
+
   }
 
   navigateToPage(pageName, product) {
@@ -70,7 +75,6 @@ export class HomePage {
   public ionViewDidEnter(): void {
     this.navCtrl.swipeBackEnabled = false;
   }
-
 
 }
 
