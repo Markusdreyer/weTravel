@@ -20,17 +20,17 @@ export class SplashPage {
     this.slides = [
       {
         title: 'Travel advice',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
+        description: 'There is alot of Iconic views you can see in Oslo, take your time and enjoy!',
         image: 'assets/imgs/splash/001-suitcase.png'
       },
       {
         title: 'Things to see and do in Oslo',
-        description: 'Mauris ullamcorper id ante sed vehicula. Praesent auctor dolor vel nisi vehicula mollis. ',
+        description: 'Our App offers the most popular attractions in Oslo, it´s constantly evolving thanks to our users!',
         image: 'assets/imgs/splash/002-flag.png'
       },
       {
         title: 'Add destinations to favorites',
-        description: 'Nam eu rutrum elit, a consectetur diam. Mauris eu vulputate augue, tristique accumsan lectus. ',
+        description: 'To add something to your time planner, simply type the bookmark button in the description of the attraction. ',
         image: 'assets/imgs/splash/003-bookmark.png'
       }
     ];

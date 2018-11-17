@@ -19,12 +19,12 @@ export class SearchRestaurantPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.restaurants = [
-      new Restaurant("Souterrain", "../../assets/imgs/thumbnail/Restaurant/crop.jpg", "$$$$", "Fossveien 7, 0551 Oslo", 3),
-      new Restaurant("Tom Lavender", "../../assets/imgs/thumbnail/Restaurant/crop1.jpg", "$", "Konvallveien 23, 1921 Oslo", 4),
-      new Restaurant("Upkvikking", "../../assets/imgs/thumbnail/Restaurant/crop2.jpg", "$$$", "Platsen 31, 0541 Oslo", 1),
-      new Restaurant("Supreme Roast", "../../assets/imgs/thumbnail/Restaurant/crop3.jpg", "$$", "Konvallveien 23, 1921 Oslo", 4),
-      new Restaurant("Luova Hangout", "../../assets/imgs/thumbnail/Restaurant/crop4.jpg", "$", "Platsen 31, 0541 Oslo", 5),
-      new Restaurant("Baker Svansen", "../../assets/imgs/thumbnail/Restaurant/crop5.jpg", "$$$", "Carld Berner 12, 3121 Oslo", 3)
+      new Restaurant("Souterrain", "../../assets/imgs/thumbnail/Restaurant/crop.jpg", "$$$", "Fossveien 7, 0551 Oslo", 3),
+      new Restaurant("Tom Lavender", "../../assets/imgs/thumbnail/Restaurant/crop1.jpg", "$", "Kavringen Brygge 123, 0151 Oslo", 4),
+      new Restaurant("Upkvikking", "../../assets/imgs/thumbnail/Restaurant/crop2.jpg", "$$$", "Stranden 31, 0150 Oslo", 1),
+      new Restaurant("Supreme Roast", "../../assets/imgs/thumbnail/Restaurant/crop3.jpg", "$$", "Konvallveien 23, 0250 Oslo", 4),
+      new Restaurant("Luova Hangout", "../../assets/imgs/thumbnail/Restaurant/crop4.jpg", "$", "Karl Johans Gate 31, 0180 Oslo", 5),
+      new Restaurant("Baker Svansen", "../../assets/imgs/thumbnail/Restaurant/crop5.jpg", "$$$", "Carl Berners Plass 12, 3121 Oslo", 3)
 
     ];
     function Restaurant(name: string, image: string, price: string, location: string, rating: number) {
