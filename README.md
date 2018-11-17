@@ -1,5 +1,5 @@
 # weTravel
-[src/assets/imgs/logo.png]
+(Logo)[https://github.com/Markusdreyer/weTravel/blob/master/src/assets/imgs/logo.png]
 
 # Participants
 Olav Haugen, 
