@@ -24,7 +24,7 @@ export class DetailPage {
     public navParams: NavParams) {
     this.product = navParams.get('data');
     this.rating = navParams.get('data');
-    console.log(this.product);
+    //console.log(this.product);
     //this.product.rating = this.rating;
   }
 }

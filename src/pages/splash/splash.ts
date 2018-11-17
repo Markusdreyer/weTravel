@@ -5,6 +5,7 @@ export interface Slide {
   title: string;
   description: string;
   image: string;
+  icon: string;
 }
 
 @IonicPage()
@@ -23,19 +24,23 @@ export class SplashPage {
         description: 'Before we start, we are going to show you some of the features of our App.<br/>' +
         '<br/>Swipe to continue ' +
         '<img class="arrow" src="assets/imgs/splash/arrow.png" />',
-        image: ''
+        image: '',
+        icon: ''
       },
       {
-        title: '',
+        title: 'Add locations to your Bookmarks',
         description: 'To add something to your Bookmarks, simply tap this icon in the top left corner of an attraction, so you can find it again when needed.<br/>' +
         '<br/><img src="assets/imgs/splash/tabs.png" /><br/>' +
          'Your Bookmarks is easily accessible in the tabs at the bottom of the App.',
-        image: 'assets/imgs/splash/003-bookmark.png'
+        //image: 'assets/imgs/splash/003-bookmark.png'
+        image:'',
+        icon: 'bookmark'
       },
       {
-        title: '',
+        title: 'Title',
         description: 'We offer functionality to help make your trip in Oslo as comfortable & easy as possible, that\'s why we are working together with weChat to offer the easiest and safest payment option in the industry, if you wish to use the App without verification, simply press "Continue as Guest".',
-        image: ''
+        image: '',
+        icon: ''
       }
     ];
   }

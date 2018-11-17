@@ -27,6 +27,15 @@ page-detail {
             font-size: 16px;
             font-weight: 200;
         }
+        .price-level {
+            font-weight:700;
+            letter-spacing: .2em;
+            font-size:24px;
+            color:color($colors,secondary);
+            $ts:1px;
+            -webkit-text-stroke:$ts #666;
+            
+        }
     }
 
 }

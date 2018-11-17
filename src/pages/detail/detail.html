@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Detail</ion-title>
+    <ion-title>Details: {{product.name}}</ion-title>
   </ion-navbar>
   <img id="background-image" src="{{product.image}}">
 </ion-header>
@@ -16,7 +16,7 @@
       <ionic3-star-rating activeIcon="ios-star" defaultIcon="ios-star-outline" activeColor="#488aff" defaultColor="#007AFF"
       readonly="true" rating="{{product.rating}}">
     </ionic3-star-rating>
-      <p>$$$</p>
+      <p class="price-level">$$$</p>
     </div>
   </div>
 </ion-content>

@@ -14,22 +14,27 @@
     <ion-grid>
       <ion-row >
   <ion-list>
-
+    <form [formGroup]="login">
       <ion-item>
-        <ion-label floating>Your name <ion-icon name="person"></ion-icon></ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-label floating>Your name <ion-icon name="person"> </ion-icon><span class="required"> *</span></ion-label>
+        <ion-input type="text" required formControlName="user"></ion-input>
       </ion-item>
-    
-    </ion-list>
-    <button ion-button outline round large (click)="navigateToPage();presentToast()">
+    </form>
+  </ion-list>
+   
+    <button ion-button outline round large type="submit" [disabled]="!login.valid" (click)="navigateToPage();presentToast();">
         Log in using weChat &nbsp;<span><img 
           src='assets/imgs/login/wechat-logo.png' 
           class='wechatlogo' /></span>
         
       </button>
-      <button ion-button round large  (click)="navigateToPage();presentToast()">
+      <button ion-button round large  type="submit" [disabled]="!login.valid" (click)="navigateToPage();presentToast();">
         Continue as guest
       </button>
+
+
+
+
     </ion-row>
     </ion-grid>
     </div>
