@@ -19,23 +19,19 @@ export class SplashPage {
   constructor(public navCtrl: NavController, public menu: MenuController, public platform: Platform) {
     this.slides = [
       {
-        title: 'Welcome to your personal guide to the city of Oslo.',
-        description: 'Before we start, we are going to show you some of the features of our App.<br/>' +
-        '<br/>Swipe to continue ' +
-        '<img class="arrow" src="assets/imgs/splash/arrow.png" />',
-        image: ''
+        title: 'Travel advice',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
+        image: 'assets/imgs/splash/001-suitcase.png'
       },
       {
-        title: '',
-        description: 'To add something to your Bookmarks, simply tap this icon in the top left corner of an attraction, so you can find it again when needed.<br/>' +
-        '<br/><img src="assets/imgs/splash/tabs.png" /><br/>' +
-         'Your Bookmarks is easily accessible in the tabs at the bottom of the App.',
+        title: 'Things to see and do in Oslo',
+        description: 'Mauris ullamcorper id ante sed vehicula. Praesent auctor dolor vel nisi vehicula mollis. ',
+        image: 'assets/imgs/splash/002-flag.png'
+      },
+      {
+        title: 'Add destinations to favorites',
+        description: 'Nam eu rutrum elit, a consectetur diam. Mauris eu vulputate augue, tristique accumsan lectus. ',
         image: 'assets/imgs/splash/003-bookmark.png'
-      },
-      {
-        title: '',
-        description: 'We offer functionality to help make your trip in Oslo as comfortable & easy as possible, that\'s why we are working together with weChat to offer the easiest and safest payment option in the industry, if you wish to use the App without verification, simply press "Continue as Guest".',
-        image: ''
       }
     ];
   }
