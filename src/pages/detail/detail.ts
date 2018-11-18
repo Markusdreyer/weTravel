@@ -30,6 +30,7 @@ export class DetailPage {
   message:string;
   profileImg:string;
   rating:number;
+  public show: boolean = false;
 
   constructor(public navCtrl: NavController,
     public navParams: NavParams, public events: Events,
@@ -65,6 +66,14 @@ export class DetailPage {
     } 
   toast.present();
   }
+
+
+
+  tooltip() {
+    if (this.show == false) {
+    this.show = true;
+  } else {this.show = false}
+}
 }
 
 

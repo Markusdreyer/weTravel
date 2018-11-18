@@ -80,6 +80,30 @@ page-detail {
         margin-left: -10vw;
     }
 
+    .comment-text-area {
+        margin:2em auto;
+        ion-label {
+            font-size:.8em;
+            color:#999!important;
+        }
+        ion-item {
+            border: none!important;
+
+        }
+        ion-textarea {
+            border-radius: 2px;
+            padding: 0 1em;
+            border: 1px solid #999;
+        }
+    }
+
+    .comment-notice {
+        p {
+            white-space: normal;
+            //max-width:80%;        
+        }
+    }
+
     ion-slides {
         margin-top: -15px;
         height: 50%;
