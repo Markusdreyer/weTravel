@@ -1,3 +1,4 @@
+import { ToastController } from 'ionic-angular';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, Events } from 'ionic-angular';
 import { Dto } from '../home/Dto';
@@ -21,7 +22,8 @@ export class DetailPage {
   bookmarkText: string = "Bookmark";
 
   constructor(public navCtrl: NavController,
-    public navParams: NavParams, public events: Events) {
+    public navParams: NavParams, public events: Events,
+    public toastCtrl:ToastController) {
     this.product = navParams.get('data');
     console.log(this.product);
 
@@ -36,10 +38,17 @@ export class DetailPage {
   bookmark() {
     this.events.publish('product', this.product);
     this.bookmarked = !this.bookmarked;
+    let toast = this.toastCtrl.create({
+      duration:2000,
+      position: 'top'
+    });
     if (this.bookmarked === true) {
       this.bookmarkText = "Unmark";
+      toast.setMessage('Added \"'+ this.product.name +'\" to your bookmarks');
     } else {
       this.bookmarkText = "Bookmark";
-    }
+      toast.setMessage('Removed \"'+ this.product.name +'\" from your bookmarks');
+    } 
+  toast.present();
   }
 }
