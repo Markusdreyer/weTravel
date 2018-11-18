@@ -77,6 +77,18 @@
     </ion-row>
   </ion-card>
 
+  <!-- Add Comment -->
+  <div class="comment-text-area">
+    <ion-list>
+      <ion-item>
+        <ion-textarea (click)="tooltip()" placeholder="Add a comment ..." disabled="true"></ion-textarea>
+      </ion-item>
+      <ion-item *ngIf="show" class="comment-notice">
+        <p>Reviews on this page is temporarily disabled due to spam....</p>
+      </ion-item>
+    </ion-list>
+  </div>
+  <!--.COMMENTS-->
   <h2>
     Featured
   </h2>
@@ -101,4 +113,5 @@
       </ion-row>
     </ion-grid>
   </ion-list>
+  </ion-card>
 </ion-content>
