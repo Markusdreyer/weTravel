@@ -43,4 +43,39 @@
       <img src={{picture}}>
     </ion-slide>
   </ion-slides>
+
+  <h2>
+    Reviews
+  </h2>
+  <hr />
+
+  <!--COMMENTS-->
+  <ion-card  *ngFor="let comment of comments">
+
+  <ion-item>
+    <ion-avatar item-start>
+      <img src="{{comment.profileImg}}">
+    </ion-avatar>
+    <h2 [innerText]="comment.author"></h2>
+    <p [innerHTML]="comment.timestamp"></p>
+  </ion-item>
+
+  <ion-card-content>
+    <p [innerHTML]="comment.message"></p>
+  </ion-card-content>
+
+  <ion-row>
+    <ion-col>
+      <button ion-button icon-start clear small>
+        <div class="small-rating">
+            <ionic3-star-rating activeIcon="ios-star" defaultIcon="ios-star-outline" activeColor="#666" defaultColor="#666"
+            readonly="true" rating="{{comment.rating}}">
+          </ionic3-star-rating>
+        </div>
+      </button>
+    </ion-col>
+  </ion-row>
+
+</ion-card>
+  <!--.COMMENTS-->
 </ion-content>

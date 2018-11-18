@@ -75,6 +75,11 @@ page-detail {
         font-size: 16.5px;
     }
 
+    .small-rating .ionic3-star-rating {
+        transform:scale(.5);
+        margin-left: -10vw;
+    }
+
     ion-slides {
         margin-top: -15px;
         height: 50%;
