@@ -91,9 +91,32 @@ page-detail {
             }
         }
     }
+
     .swiper-slide-active {
         img {
           filter: blur(0);
         }
-      }
+    }
+
+    ion-list {
+        flex: 1;
+        overflow: scroll;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+
+        .ionic3-star-rating {
+            display: flex;
+            flex-wrap: nowrap;
+            transform: scale(0.4);
+            margin-top: -3.5vh;
+            margin-right: -11vw; 
+        
+          }
+          ion-card {
+            width: 40vw !important;
+            height: 23vh;
+            font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          }
+    }
 }
