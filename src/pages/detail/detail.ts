@@ -22,7 +22,6 @@ export class DetailPage {
   reviews: any[];
   bookmarked: boolean = false;
   bookmarkText: string = "Bookmark";
-<<<<<<< HEAD
 
 
   comments: any[];
@@ -32,17 +31,7 @@ export class DetailPage {
   profileImg: string;
   rating: number;
   featured: any[];
-=======
-  
-  
-  comments:any[];
-  authour:string;
-  timestamp:string;
-  message:string;
-  profileImg:string;
-  rating:number;
   public show: boolean = false;
->>>>>>> 5faa31943c5b842d4ed3538492e0e162ff26bea0
 
   constructor(public navCtrl: NavController,
     public navParams: NavParams, public events: Events,
@@ -87,12 +76,17 @@ export class DetailPage {
     toast.present();
   }
 
-<<<<<<< HEAD
   navigateToPage(pageName, product) {
     let dto = new Dto(product.name, product.image, product.price, product.location, product.zip, product.rating, product.hours);
     this.navCtrl.push(pageName, {
       data: dto
     });
+  }
+
+  tooltip() {
+    if (this.show == false) {
+      this.show = true;
+    } else { this.show = false }
   }
 }
 
@@ -104,15 +98,6 @@ function Feature(name: string, image: string, price: string, location: string, z
   this.zip = zip;
   this.rating = rating;
   this.hours = hours;
-=======
-
-
-  tooltip() {
-    if (this.show == false) {
-    this.show = true;
-  } else {this.show = false}
-}
->>>>>>> 5faa31943c5b842d4ed3538492e0e162ff26bea0
 }
 
 
