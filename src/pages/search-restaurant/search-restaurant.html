@@ -8,8 +8,8 @@
 
 
 <ion-content padding>
-  <ion-card *ngFor="let restaurant of restaurants">
-    <img src={{restaurant.image}}/>
+  <ion-card (click)="navigateToPage(restaurant)" *ngFor="let restaurant of restaurants">
+    <img src={{restaurant.image}} />
     <ion-card-content>
       <ion-card-title>
         {{restaurant.name}}

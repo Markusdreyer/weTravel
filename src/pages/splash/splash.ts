@@ -20,7 +20,7 @@ export class SplashPage {
     this.slides = [
       {
         title: 'Travel advice',
-        description: 'There is alot of Iconic views you can see in Oslo, take your time and enjoy!',
+        description: 'There\'s a lot of iconic views you can see in Oslo. Take your time and enjoy!',
         image: 'assets/imgs/splash/001-suitcase.png'
       },
       {

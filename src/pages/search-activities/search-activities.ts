@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Dto } from '../home/DTO';
 
 @IonicPage()
 @Component({
@@ -27,4 +28,13 @@ export class SearchActivitiesPage {
     }
   }
 
+  navigateToPage(product) {
+    let dto = new Dto(product.name, product.image, product.price, product.location, product.zip, product.rating, product.hours);
+    this.navCtrl.push('DetailPage', {
+      data: dto
+    });
+  }
+
 }
+
+

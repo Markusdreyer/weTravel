@@ -8,8 +8,8 @@
 
 
 <ion-content padding>
-  <ion-card *ngFor="let shopping of shops">
-    <img src={{shopping.image}}/>
+  <ion-card (click)="navigateToPage(shopping)" *ngFor="let shopping of shops">
+    <img src={{shopping.image}} />
     <ion-card-content>
       <ion-card-title>
         {{shopping.name}}

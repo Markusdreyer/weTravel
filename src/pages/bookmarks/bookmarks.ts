@@ -16,7 +16,6 @@ export class BookmarksPage {
       new Product("Souterrain", "../../assets/imgs/thumbnail/Restaurant/crop.jpg", "$$$$", "Fossveien 7,", "0551 Oslo", "3", "09-18"),
       new Product("Castle Tour", "./../assets/imgs/thumbnail/Activities/crop.jpg", "$$", "Platsen 31,", "0541 Oslo", "3", "09-18"),
       new Product("Tom Lavender", "../../assets/imgs/thumbnail/Restaurant/crop1.jpg", "$", "Konvallveien 23,", "1921 Oslo", "4", "09-18"),
-      new Product("Old Quarters", "../../assets/imgs/thumbnail/Shopping/crop.jpg", "$$", "Platsen 31,", "0541 Oslo", "2", "09-18")
     ];
   }
 

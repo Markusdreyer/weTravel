@@ -1,4 +1,3 @@
-
 <ion-header>
 
   <ion-navbar>
@@ -9,8 +8,8 @@
 
 
 <ion-content padding>
-  <ion-card *ngFor="let activity of activities">
-    <img src={{activity.image}}/>
+  <ion-card (click)="navigateToPage(activity)" *ngFor="let activity of activities">
+    <img src={{activity.image}} />
     <ion-card-content>
       <ion-card-title>
         {{activity.name}}
