@@ -10,37 +10,10 @@
 
 
 <ion-content class="ion-card-bg">
-  <ion-card-content>
-    <ion-card>
-      <img src="../../assets/imgs/full/Holmenkollen.jpeg" class="images">
-      <div class="card-title">Holmenkollen</div>
-      <div class="card-underline">Kongeveien 5, 0787 Oslo</div>
-      <div class="card-opening">08:00-20:00</div>
-
+  <ion-content class="card-background-page">
+    <ion-card (click)="navigateToPage('DetailPage', product)" *ngFor="let product of products">
+      <img src="{{product.image}}" />
+      <div class="card-title">{{product.name}}</div>
+      <div class="card-subtitle">{{product.hours}}</div>
     </ion-card>
-
-    <ion-card>
-      <img src="../../assets/imgs/full/restaurantEdda.jpeg" class="images" >
-      <div class="card-title">Restaurant Edda</div>
-      <div class="card-underline">1, Henny Mürers gang, 0150 Oslo</div>
-      <div class="card-opening">16:00-23:30</div>
-    </ion-card>
-
-    <ion-card>
-      <img src="../../assets/imgs/full/denGladeGris.jpeg" class="images" >
-      <div class="card-title">Den Glade Gris</div>
-      <div class="card-underline">St. Olavs Gate 33, 0166 Oslo</div>
-      <div class="card-opening">11:00-22:00</div>
-    </ion-card>
-
-    <ion-card>
-      <img src="../../assets/imgs/full/hosThea.jpeg" class="images" >
-      <div class="card-title">Hos Thea</div>
-      <div class="card-underline">Gabels gate 11, 0272 Oslo</div>
-      <div class="card-opening">17:00-23:00</div>
-    </ion-card>
-
-  </ion-card-content>
-
-
-</ion-content>
+  </ion-content>
